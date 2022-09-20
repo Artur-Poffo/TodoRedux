@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.head {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-head {
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #313131;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.add {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(0, 153, 255);
+  color: #eee;
+  font-weight: bold;
+  font-size: 2rem;
+  box-shadow: 10px 10px 20px #313131;
+  cursor: pointer;
+  transition: all .5s ease;
+  z-index: 999;
+}
+
+.add:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 20px rgb(0, 153, 255);;
+}
+
+.task-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  background-color: #272727;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.task-name {
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.card button {
+  margin-left: 16px;
+}
+
+.done, .delete {
+  width: 100px;
+  padding: 13px;
+  background-color: aquamarine;
+  color: white;
+  border-radius: 15px;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.done:hover {
+  box-shadow: 3px 6px 20px aquamarine;
+}
+
+.TaskDone {
+  text-decoration: line-through;
+}
+
+.delete {
+  background-color: crimson;
+}
+
+.delete:hover {
+  box-shadow: 3px 6px 20px crimson;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal{
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal h2 {
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+#task-name {
+  padding: 6px;
+  border: 2px solid #272727;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+  .card {
+    padding: 14px;
+    width: 100vw;
+  }
+
+  .delete, .done {
+    margin-bottom: 10px;
+  }
+}
